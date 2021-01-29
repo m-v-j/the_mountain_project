@@ -1,21 +1,84 @@
-#html,body {
+:root {
+  --nav-icon-width: 100px;
+  --nav-border-width: 15px;
+}
+
+html,
+body {
   background-image: url(../images/themountain.jpg);
   background-image: no-repeat;
   background-size: cover;
-}
-
-#title {
-  position: relative;
-  text-align: center;
-  margin-top: 30px;
-  color: #473f3f;
-  font-size: 100px;
+  height: 100%;
+  margin: 0;
   font-family: sans-serif;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 3px;
 }
 
-#learnbtn {
+.page-container {
+  height: inherit;
+  display: flex;
+}
+
+.main {
+  height: inherit;
+  padding: 0;
+  padding-left: var(--nav-border-width);
+  overflow-y: auto;
+}
+
+.nav {
+  width: 300px;
+  height: inherit;
+  position: relative;
+  background-color: #eeeeee;
+  transition: width 0.2s;
+  flex-shrink: 0;
+}
+
+.nav--collapsed {
+  width: var(--nav-icon-width);
+}
+
+.nav--collapsed .nav__label {
+  display: none;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav__link:hover {
+  background-color: #dddddd;
+}
+
+.nav__icon-container {
+  width: var(--nav-icon-width);
+  height: var(--nav-icon-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav__border {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--nav-border-width);
+  height: inherit;
+  background-color: #dddddd;
+  transition: background-color 0.2s;
+  cursor: ew-resize;
+}
+
+.nav__border:hover {
+  background-color: #cccccc;
+}
+
+.learnbtn {
   position: absolute;
   top: 2px;
   right: 2px;
@@ -26,17 +89,17 @@
   background-color: #473f3f;
   border-radius: 4px;
   box-shadow: inset 0 0 0 0#473f3f;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.2s;
   font-size: 1.5rem;
   outline: none;
 }
 
-#learnbtn:hover {
+.learnbtn:hover {
   box-shadow: inset 200px 0 0 0 rgb(148, 106, 106);
   cursor: pointer;
 }
 
-#firstclimberbtn {
+.firstclimberbtn {
   position: absolute;
   top: 75px;
   right: 2px;
@@ -47,12 +110,12 @@
   background-color: #473f3f;
   border-radius: 4px;
   box-shadow: inset 0 0 0 0 #473f3f;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.2s;
   font-size: 1.3rem;
   outline: none;
 }
 
-#firstclimberbtn:hover {
+.firstclimberbtn:hover {
   box-shadow: inset 200px 0 0 0 rgb(148, 106, 106);
   cursor: pointer;
 }
