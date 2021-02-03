@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>The Mountain.</title>
+    <title>Mount Everest.</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
   </head>
   <body>
-    <div class="page-container">
+    <div class="title-container">
+      <span class="title">Mount Everest</span>
+    </div>
+    <div class="menu-container">
       <nav class="nav">
         <div class="nav__border"></div>
-        <a class="nav__link">
+        <a href="index.html" class="nav__link" id="homebtn">
+          <div class="nav__icon-container">
+            <i class="material-icons">home</i>
+          </div>
+          <span class="nav__label">Home</span>
+        </a>
+        <a href="about.html" class="nav__link">
+          <div class="nav__icon-container">
+            <i class="material-icons">reorder</i>
+          </div>
+          <span class="nav__label">About</span>
+        </a>
+        <a class="nav__link" id="wikibtn">
           <div class="nav__icon-container">
             <i class="material-icons">explore</i>
           </div>
           <span class="nav__label">Wiki</span>
         </a>
-        <a class="nav__link">
+        <a class="nav__link" id="firstbtn">
           <div class="nav__icon-container">
             <i class="material-icons">accessibility_new</i>
           </div>
@@ -27,9 +40,8 @@
       </nav>
       <main class="main"></main>
     </div>
-    <div class="buttons">
-      <button class="learnbtn">Learn More.</button>
-      <button class="firstclimberbtn">The First Climbers.</button>
+    <div class="author-information">
+      <footer>Created by Mathias Villum Jensen</footer>
     </div>
     <script src="script.js"></script>
   </body>
