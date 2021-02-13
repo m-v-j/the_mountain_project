@@ -1,2 +1,2 @@
 # hello_world-webdev
-My first web development project.
+Abandoned web development project.
